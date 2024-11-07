@@ -16,10 +16,10 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
-2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
-3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))([UC2](#uc2))
+3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))([UC3](#uc3))
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.([UC4](#uc4))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.([UC5](#uc5))
 
 **Scenariusze alternatywne:** 
 
@@ -50,11 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC5](#uc5): Przekazanie produktu Kupującemu 
 
 [Kupujący](#ac2)
-* ...
-
+* [UC2](#uc2): Podanie kwoty za produkt na licytacji
+* [UC3](#uc3): Wygranie aukcji
+* [UC4](#uc4): Przekazanie należności Sprzedającemu 
 ---
 <a id="uc1"></a>
 ### UC1: Wystawienie produktu na aukcję
@@ -77,17 +78,22 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Podanie kwoty za produkt na licytacji
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Kupujący](#ac2) wybiera aukcję, na której chce złożyć ofertę.
+2. System wyświetla aktualną najwyższą ofertę oraz minimalną kwotę, jaką można zadeklarować.
+3. [Kupujący](#ac2) podaje kwotę swojej oferty.
+4. System weryfikuje poprawność podanej kwoty.
+5. System informuje o pomyślnym przyjęciu oferty.
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+4.A. Podano kwotę niższą niż minimalna do zaakceptowania.
+* 4.A.1. System informuje o nieprawidłowej kwocie oferty.
+* 4.A.2. Przejdź do kroku 2.
 
 ---
 
