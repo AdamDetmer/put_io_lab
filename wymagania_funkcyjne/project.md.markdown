@@ -215,7 +215,11 @@ Kupujący mają obowiązek zgłoszenia problemu z produktem w ciągu 7 dni roboc
 | UC1: Wystawienie produktu na aukcję               |   C    |    C    |   -    |    -     |     -     |
 | UC2: Podanie kwoty za produkt na licytacji        |   R    |    R    |   C    |    -     |     -     |
 | UC3: Wygranie aukcji                              |   U    |    R    |   R    |    -     |     -     |
-| UC4: Przekazanie należności Sprzedającemu         |   R    |    R    |   R    |    C     |     -     |
-| UC5: Przekazanie produktu Kupującemu              |   R    |    R    |   R    |    R     |     C     |
+| UC4: Przekazanie należności Sprzedającemu         |   D    |         |        |    C     |     -     |
+| UC5: Przekazanie produktu Kupującemu              |        |    D    |   D    |    R     |     C     |
 
+
+## Brakujące przypadki użycia
+
+Uważam ze niekompletność macierzy CRUDL w tym przypadku jest dopuszczalna, a wprowadzone wcześniej przypadki użycia dobrze opisują poziom biznesowy. Dlatego nie dodawałbym już kolejnych przypadków, dla tych wymagań funkcyjnych żeby zachować ścisłą i prostą formę.
 
